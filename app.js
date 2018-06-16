@@ -4,7 +4,7 @@ var express = require('express'),
  	io = require('socket.io').listen(server),
  	ejs = require('ejs');
  	users = {},
- 	server.listen(8080),
+ 	server.listen(9000),
  	mongoose = require('mongoose');
 personal_nickname ={};
 io.set('log level', 2);
@@ -33,14 +33,12 @@ String.prototype.replaceAt=function(index, character) {
 
  	app.get('/',function(req,res){
 
-res.render(__dirname + '/index.ejs');
+		res.render(__dirname + '/index.ejs');
 
  	});
 
 var my_nickname = '';
 app.set('view engine', 'ejs');
-
-
 
 
  io.sockets.on('connection',function(socket){
